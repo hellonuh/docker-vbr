@@ -7,10 +7,10 @@ A simple utility to backup your volume data
 ### Backup
 ```
 # Linux
-docker run --rm -it -v volume-to-bckp:/nusrc -v ${PWD}:/nudest hellonuh/vbr:bckp
+docker run --rm -it -v volume-to-bckp:/nusrc -v ${PWD}:/nudest -e nuName="bckp.tar.gz" hellonuh/vbr:bckp
 
 # Window
-docker run --rm -it -v volume-to-bckp:/nusrc -v d:\bckpFolder:/nudest hellonuh/vbr:bckp
+docker run --rm -it -v volume-to-bckp:/nusrc -v d:\bckpFolder:/nudest -e nuName="bckp.tar.gz" hellonuh/vbr:bckp
 ```
 
 ### Restore

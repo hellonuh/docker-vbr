@@ -1,5 +1,10 @@
 #!/bin/sh
 cd /nusrc
-tar -zcvf bckp.tar.gz .
-mv bckp.tar.gz /nudest
+echo "Going to backup /nusrc"
+echo "----------------"
+echo $nuName
+echo "----------------"
+tar -zcvf $nuName .
+echo "moving tar.gz file to /nudest"
+mv $nuName /nudest
 echo "complete"
